@@ -3,7 +3,7 @@ const mappers = require('./mappers');
 
 const { readHeader } = require("./readHeader");
 const { loadData } = require("./loadData");
-const { Metadata } = require("./Metadata");
+const { metadata } = require("./metadata");
 
 const sources = [
   {
@@ -20,8 +20,6 @@ const sources = [
     output: 'scotland.csv'
   }
 ];
-
-const metadata = new Metadata();
 
 async function process({ geo, measure, url, mapper = identity, output}) {
   const dateFetched = (new Date).toISOString();

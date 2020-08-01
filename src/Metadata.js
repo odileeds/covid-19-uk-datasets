@@ -21,4 +21,6 @@ class Metadata {
   }
 
 }
-exports.Metadata = Metadata;
+
+const metadata = new Metadata();
+exports.metadata = metadata;
