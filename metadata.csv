@@ -1,0 +1,3 @@
+"datasetName","dateFetched","headerFields"
+"Scotland-cases","2020-08-01T09:39:21.730Z","Date|Ayrshire and Arran|Borders|Dumfries and Galloway|Fife|Forth Valley|Grampian|Greater Glasgow and Clyde|Highland|Lanarkshire|Lothian|Orkney|Shetland|Tayside|Western Isles"
+"England-cases","2020-08-01T09:39:21.730Z","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Previously reported daily cases|Change in daily cases|Cumulative lab-confirmed cases|Previously reported cumulative cases|Change in cumulative cases|Cumulative lab-confirmed cases rate"
