@@ -11,13 +11,13 @@ const sources = [
     measure: "cases",
     url: "https://coronavirus.data.gov.uk/downloads/csv/coronavirus-cases_latest.csv",
     mapper: mappers.en,
-    output: 'england.csv'
+    output: 'england-cases.csv'
   },
   {
     geo: "Scotland",
     measure: "cases",
     url: "https://raw.githubusercontent.com/DataScienceScotland/COVID-19-Management-Information/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scottish%20Health%20Boards%20-%20Cumulative%20cases.csv",
-    output: 'scotland.csv'
+    output: 'scotland-cases.csv'
   }
 ];
 

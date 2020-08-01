@@ -9,7 +9,7 @@ function en2020731(data) {
 
   return {
     AreaCode,
-    AreaName,
+    // AreaName,
     Date,
     DailyCases,
     TotalCases,
