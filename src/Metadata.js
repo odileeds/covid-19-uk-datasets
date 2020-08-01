@@ -13,8 +13,8 @@ class Metadata {
       columns: true,
     });
   }
-  push({ datasetName, dateFetched, headerFields }) {
-    this.metadata.push({ datasetName, dateFetched, headerFields });
+  push(data) {
+    this.metadata.push(data);
   }
   async writeMetadata() {
     return writeCsv(this.metadata, this.metadataPath);

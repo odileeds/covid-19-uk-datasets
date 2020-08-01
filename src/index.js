@@ -1,4 +1,4 @@
-const { identity, writeCsv, dataPath } = require("./util");
+const { getModificationTime, identity, writeCsv, dataPath } = require("./util");
 const mappers = require('./mappers');
 
 const { readHeader } = require("./readHeader");
@@ -23,16 +23,30 @@ const sources = [
 
 async function process({ geo, measure, url, mapper = identity, output}) {
   const dateFetched = (new Date).toISOString();
-  const header = await readHeader(url);
+  const datasetName = `${geo}-${measure}`;
   const thisRecord = {
-    datasetName: `${geo}-${measure}`,
+    datasetName,
     dateFetched,
-    headerFields: header.join('|')
   }
+  try {
+    thisRecord.lastModified = await getModificationTime(url);
+    thisRecord.stableLocation = "true";
+  } catch(err) {
+    if (err.status !== 404) throw err;
+    metadata.push({
+      ...thisRecord,
+      stableLocation: "false",
+    })
+    return;
+  }
+  const header = await readHeader(url);
+  thisRecord.headerFields = header.join('|');
   if (metadata.comparePrevious(thisRecord)) {
-    console.log(`The ${geo}-${measure} dataset is stable.`);
+    console.log(`The ${datasetName} dataset is stable.`);
+    thisRecord.stableColumns = "true";
   } else {
-    console.warning(`The ${geo}-${measure} dataset has changed!`)
+    console.warning(`The ${datasetName} dataset has changed!`)
+    thisRecord.stableColumns = "false";
   };
   metadata.push(thisRecord);
   const data = await loadData(url, header);
