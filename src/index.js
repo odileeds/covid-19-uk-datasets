@@ -24,11 +24,17 @@ const sources = [
 async function process({ geo, measure, url, mapper = identity, output}) {
   const dateFetched = (new Date).toISOString();
   const header = await readHeader(url);
-  metadata.push({
+  const thisRecord = {
     datasetName: `${geo}-${measure}`,
     dateFetched,
     headerFields: header.join('|')
-  });
+  }
+  if (metadata.comparePrevious(thisRecord)) {
+    console.log(`The ${geo}-${measure} dataset is stable.`);
+  } else {
+    console.warning(`The ${geo}-${measure} dataset has changed!`)
+  };
+  metadata.push(thisRecord);
   const data = await loadData(url, header);
 
   await writeCsv(data.map(mapper), dataPath(output));

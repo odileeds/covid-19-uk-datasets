@@ -19,7 +19,16 @@ class Metadata {
   async writeMetadata() {
     return writeCsv(this.metadata, this.metadataPath);
   }
-
+  comparePrevious({ datasetName, headerFields }) {
+    const previous = this.metadata
+      .filter(m => m.datasetName === datasetName)
+      .sort((m, n) => {
+        if (m.dateFetched < n.dateFetched) return 1;
+        if (m.dateFetched > n.dateFetched) return -1;
+        return 0;
+      });
+    return previous[0].headerFields === headerFields;
+  }
 }
 
 const metadata = new Metadata();
