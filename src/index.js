@@ -3,7 +3,7 @@ const mappers = require('./mappers');
 
 const { readHeader } = require("./readHeader");
 const { loadData } = require("./loadData");
-const { metadata } = require("./metadata");
+const { metadata } = require("./metadataManager");
 
 const sources = [
   {

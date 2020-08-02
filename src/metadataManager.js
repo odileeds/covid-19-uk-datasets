@@ -33,3 +33,5 @@ class Metadata {
 
 const metadata = new Metadata();
 exports.metadata = metadata;
+
+module.exports = exports;

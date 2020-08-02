@@ -3,9 +3,6 @@ name: Grab latest data
 on:
   schedule:
     - cron:  '20 * * * *'
-  push:
-    branches:
-      - master
 
 jobs:
   build:
