@@ -4,7 +4,7 @@ const { grabCsv, writeCsv } = require("./util");
 
 class Metadata {
   constructor() {
-    this.metadataPath = path.resolve(path.join(__dirname, '..', 'metadata.csv'));
+    this.metadataPath = path.resolve(path.join(__dirname, '..', 'data', '_metadata.csv'));
     this.metadata = [];
   }
   async readMetadata() {
