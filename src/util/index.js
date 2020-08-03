@@ -3,8 +3,7 @@ const { grabCsv } = require('./grabCsv');
 const { writeCsv } = require('./writeCsv');
 const { dataPath } = require('./dataPath');
 const { getHeaderData } = require('./getHeaderData');
-
-const identity = x => x;
+const { identity } = require('./identity');
 
 module.exports = {
   dataPath,

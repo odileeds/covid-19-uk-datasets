@@ -5,6 +5,7 @@ const { readHeader } = require("./readHeader");
 const { loadData } = require("./loadData");
 const { metadata } = require("./metadataManager");
 const { buildReport } = require("./report");
+const { scotlandTransform } = require('./transformers');
 
 const sources = [
   {
@@ -18,11 +19,12 @@ const sources = [
     geo: "Scotland",
     measure: "cases",
     url: "https://raw.githubusercontent.com/DataScienceScotland/COVID-19-Management-Information/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scottish%20Health%20Boards%20-%20Cumulative%20cases.csv",
-    output: 'scotland-cases.csv'
+    output: 'scotland-cases.csv',
+    transformer: scotlandTransform,
   }
 ];
 
-async function process({ geo, measure, url, mapper = identity, output}) {
+async function process({ geo, measure, url, transformer = identity, mapper = identity, output}) {
   const dateFetched = (new Date).toISOString();
   const datasetName = `${geo}-${measure}`;
   const thisRecord = {
@@ -54,7 +56,8 @@ async function process({ geo, measure, url, mapper = identity, output}) {
   metadata.push(thisRecord);
   const data = await loadData(url, header);
 
-  await writeCsv(data.map(mapper), dataPath(output));
+  await writeCsv(transformer(data)
+    .map(mapper), dataPath(output));
   await buildReport();
   return;
 }

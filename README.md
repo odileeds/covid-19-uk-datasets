@@ -1,6 +1,7 @@
 # ODI Leeds COVID-19 UK Dataset aggregator
 
 ![](./badges/England-cases.svg)
+![](./badges/Scotland-cases.svg)
 
 We have created this repository to bring together (and track) the status of important COVID-19
 datasets for the four nations of the UK. It is happening now as we have previously relied on
@@ -13,6 +14,7 @@ be updated, unless we can collate the details ourselves.
 ## Datasets
 
 * [English Cases by ONS Code (UTLA and English Region)](./data/england-cases.csv)
+* [Scottish Cases by ONS Code (UTLA and English Region)](./data/scotland-cases.csv)
 
 ## Notes
 
