@@ -48,12 +48,12 @@ class Metadata {
         datasetName,
         dateFetched,
         lastModified,
-        contentSize,
+        contentLength,
         headerFields,
         stableLocation,
         stableColumns,
       } = curr;
-      const fingerprint = [datasetName, lastModified, contentSize, headerFields, stableLocation, stableColumns].join('');
+      const fingerprint = [datasetName, lastModified, contentLength, headerFields, stableLocation, stableColumns].join('');
       if (!acc[fingerprint]) acc[fingerprint] = curr;
       if (curr.dateFetched > acc[fingerprint].dateFetched) acc[fingerprint] = curr;
       return acc;
@@ -61,7 +61,7 @@ class Metadata {
     this.metadata = Object.values(newMetadata).sort((a, b) => {
       if (a.dateFetched < b.dateFetched) return -1;
       if (a.dateFetched > b.dateFetched) return 1;
-      return 0;
+      return
     });
   }
 }
