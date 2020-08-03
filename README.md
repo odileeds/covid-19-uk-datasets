@@ -14,7 +14,7 @@ be updated, unless we can collate the details ourselves.
 ## Datasets
 
 * [English Cases by ONS Code (UTLA and English Region)](./data/england-cases.csv)
-* [Scottish Cases by ONS Code (UTLA and English Region)](./data/scotland-cases.csv)
+* [Scottish Cases by ONS Code (Health Board Areas)](./data/scotland-cases.csv)
 
 ## Notes
 
