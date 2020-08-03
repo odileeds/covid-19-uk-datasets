@@ -58,7 +58,11 @@ class Metadata {
       if (curr.dateFetched > acc[fingerprint].dateFetched) acc[fingerprint] = curr;
       return acc;
     }, {});
-    this.metadata = Object.values(newMetadata);
+    this.metadata = Object.values(newMetadata).sort((a, b) => {
+      if (a.dateFetched < b.dateFetched) return -1;
+      if (a.dateFetched > b.dateFetched) return 1;
+      return 0;
+    });
   }
 }
 
