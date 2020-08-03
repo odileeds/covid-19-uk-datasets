@@ -1,4 +1,4 @@
-const { getModificationTime, identity, writeCsv, dataPath } = require("./util");
+const { getHeaderData, identity, writeCsv, dataPath } = require("./util");
 const mappers = require('./mappers');
 
 const { readHeader } = require("./readHeader");
@@ -30,7 +30,9 @@ async function process({ geo, measure, url, mapper = identity, output}) {
     dateFetched,
   }
   try {
-    thisRecord.lastModified = await getModificationTime(url);
+    const headerData = await getHeaderData(url);
+    thisRecord.lastModified = headerData.lastModified;
+    thisRecord.contentLength = headerData.contentLength;
     thisRecord.stableLocation = "true";
   } catch(err) {
     if (err.status !== 404) throw err;
