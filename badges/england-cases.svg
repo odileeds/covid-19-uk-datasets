@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 200 30" version="1.1">
-  <rect fill="#444" width="200" height="30" rx="15"></rect>
-  <text fill="white" font-family="Helvetica,Arial,sans-serif" dominant-baseline="middle" x="30" y="15">England-cases</text>
-  <g transform="translate(5 5)">
-    <rect width="20" height="20" x="0" y="0" fill="#00BB00" rx="10"></rect>
-    <path transform="translate(5 4) scale(0.5) rotate(-45 12 12)" d="M 2 0 h 4 q 2 0 2 2 v 6 q 0 2 2 2 h 12 q 2 0 2 2 v 4 q 0 2 -2 2 H 2 q -2 0 -2 -2 V 2 Q 0 0 2 0" fill="white"/>
-  </g>  
-</svg>
