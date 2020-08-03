@@ -47,10 +47,10 @@ async function process({ geo, measure, url, transformer = identity, mapper = ide
   const header = await readHeader(url);
   thisRecord.headerFields = header.join('|');
   if (metadata.comparePrevious(thisRecord)) {
-    console.log(`The ${datasetName} dataset is stable.`);
+    console.log(`The ${datasetName} dataset schema is stable.`);
     thisRecord.stableColumns = "true";
   } else {
-    console.warning(`The ${datasetName} dataset has changed!`)
+    console.warn(`The ${datasetName} dataset schema has changed!`);
     thisRecord.stableColumns = "false";
   };
   metadata.push(thisRecord);
