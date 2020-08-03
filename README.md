@@ -12,7 +12,7 @@ be updated, unless we can collate the details ourselves.
 
 ## Datasets
 
-* [Cases by ONS Code (UTLA and English Region)](./data/england-cases.csv)
+* [English Cases by ONS Code (UTLA and English Region)](./data/england-cases.csv)
 
 ## Notes
 

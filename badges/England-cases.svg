@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 200 30" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 30" version="1.1">
   <rect fill="#444" width="200" height="30" rx="15"></rect>
   <text fill="white" font-family="Helvetica,Arial,sans-serif" dominant-baseline="middle" x="30" y="15">England-cases</text>
   <g transform="translate(5 5)">
