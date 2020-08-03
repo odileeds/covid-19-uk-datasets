@@ -29,6 +29,7 @@ class Metadata {
     this.metadata.push(data);
   }
   async writeMetadata() {
+    this.compress();
     return writeCsv(this.metadata, this.metadataPath);
   }
   comparePrevious({ datasetName, headerFields }) {
@@ -40,6 +41,24 @@ class Metadata {
         return 0;
       });
     return previous[0].headerFields === headerFields;
+  }
+  compress() {
+    const newMetadata = this.metadata.reduce((acc, curr) => {
+      const {
+        datasetName,
+        dateFetched,
+        lastModified,
+        contentSize,
+        headerFields,
+        stableLocation,
+        stableColumns,
+      } = curr;
+      const fingerprint = [datasetName, lastModified, contentSize, headerFields, stableLocation, stableColumns].join('');
+      if (!acc[fingerprint]) acc[fingerprint] = curr;
+      if (curr.dateFetched > acc[fingerprint].dateFetched) acc[fingerprint] = curr;
+      return acc;
+    }, {});
+    this.metadata = Object.values(newMetadata);
   }
 }
 
