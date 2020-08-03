@@ -1,5 +1,5 @@
 const scotlandAreadLookup = [
-  { AreaCode: 'S08000015', names: ['Ayrshire and Arran'], },
+  { AreaCode: 'S08000015', names: ['Ayrshire and Arran'] },
   { AreaCode: 'S08000016', names: ['Borders'] },
   { AreaCode: 'S08000017', names: ['Dumfries and Galloway'] },
   { AreaCode: 'S08000029', names: ['Fife'] },
