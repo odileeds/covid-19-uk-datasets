@@ -4,6 +4,7 @@ const mappers = require('./mappers');
 const { readHeader } = require("./readHeader");
 const { loadData } = require("./loadData");
 const { metadata } = require("./metadataManager");
+const { buildReport } = require("./report");
 
 const sources = [
   {
@@ -52,6 +53,7 @@ async function process({ geo, measure, url, mapper = identity, output}) {
   const data = await loadData(url, header);
 
   await writeCsv(data.map(mapper), dataPath(output));
+  await buildReport();
   return;
 }
 

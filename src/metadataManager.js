@@ -13,6 +13,18 @@ class Metadata {
       columns: true,
     });
   }
+  get loaded() {
+    return this.metadata.length > 0;
+  }
+  get latest() {
+    return Object.values(this.metadata.reduce((acc, data) => {
+      const { datasetName, dateFetched } = data;
+      if (!datasetName) return acc;
+      if (!acc[datasetName]) acc[datasetName] = data;
+      if (dateFetched > acc[datasetName].dateFetched) acc[datasetName] = data;
+      return acc;
+    }, {}));
+  }
   push(data) {
     this.metadata.push(data);
   }
