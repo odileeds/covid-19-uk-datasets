@@ -28,8 +28,8 @@ const statusSvg = (dataset) => `<svg xmlns="http://www.w3.org/2000/svg" height="
 </svg>`
 
 function calculateStatus({ stableLocation, stableColumns }) {
-  if (!stableLocation) return 'broken';
-  if (!stableColumns) return 'unstable';
+  if (stableLocation === 'false') return 'broken';
+  if (stableColumns === 'false') return 'unstable';
   return 'stable';
 }
 
