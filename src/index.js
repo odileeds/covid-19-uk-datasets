@@ -37,7 +37,8 @@ async function process({ geo, measure, url, transformer = identity, mapper = ide
     thisRecord.contentLength = headerData.contentLength;
     thisRecord.stableLocation = "true";
   } catch(err) {
-    if (err.status !== 404) throw err;
+    if (!err.status) throw err;
+    console.error(err)
     metadata.push({
       ...thisRecord,
       stableLocation: "false",
