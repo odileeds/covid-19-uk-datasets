@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 async function getHeaderData(url) {
-  const res = await axios.head(url);
+  const res = await axios.get(url);
   const contentLength = res.headers['content-length'];
   let lastModified;
   try {
