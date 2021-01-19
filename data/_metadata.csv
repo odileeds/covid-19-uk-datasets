@@ -265,7 +265,6 @@
 "England-cases","2021-01-09T15:49:02.304Z","2021-01-08T16:02:00.000Z","1258745","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","true"
 "England-cases","2021-01-10T15:50:45.288Z","2021-01-09T16:02:00.000Z","1261780","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","true"
 "England-cases","2021-01-11T15:47:50.459Z","2021-01-10T16:02:00.000Z","1266851","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","true"
-"England-cases","2021-01-11T17:38:23.748Z",,,,"false",
 "England-cases","2021-01-11T19:02:23.594Z","2021-01-11T18:04:30.000Z","1272601","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","false"
 "Scotland-cases","2021-01-12T14:04:10.604Z",,"21643","Date|Ayrshire and Arran|Borders|Dumfries and Galloway|Fife|Forth Valley|Grampian|Greater Glasgow and Clyde|Highland|Lanarkshire|Lothian|Orkney|Shetland|Tayside|Western Isles","true","true"
 "England-cases","2021-01-12T15:56:12.134Z","2021-01-11T19:50:04.000Z","1272601","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","true"
@@ -277,4 +276,5 @@
 "England-cases","2021-01-17T15:58:00.445Z","2021-01-16T16:02:19.000Z","1299215","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","true"
 "England-cases","2021-01-18T16:01:08.494Z","2021-01-17T16:02:06.000Z","1304268","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","true"
 "England-cases","2021-01-19T16:01:12.698Z","2021-01-18T16:45:01.000Z","1309380","Area name|Area code|Area type|Specimen date|Daily lab-confirmed cases|Cumulative lab-confirmed cases|Cumulative lab-confirmed cases rate","true","true"
-"Scotland-cases","2021-01-19T16:01:12.698Z",,"22225","Date|Ayrshire and Arran|Borders|Dumfries and Galloway|Fife|Forth Valley|Grampian|Greater Glasgow and Clyde|Highland|Lanarkshire|Lothian|Orkney|Shetland|Tayside|Western Isles","true","true"
+"England-cases","2021-01-19T17:47:16.475Z",,,,"false",
+"Scotland-cases","2021-01-19T17:47:16.476Z",,"22225","Date|Ayrshire and Arran|Borders|Dumfries and Galloway|Fife|Forth Valley|Grampian|Greater Glasgow and Clyde|Highland|Lanarkshire|Lothian|Orkney|Shetland|Tayside|Western Isles","true","true"
